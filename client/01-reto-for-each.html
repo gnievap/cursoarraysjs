@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de manipulación de arrays con JS</title>
+</head>
+<body>
+    <h2>Lista de tareas </h2>
+    <hr>
+    <div id="tasks"></div>
+    <script>
+        const tareas = [
+            { title: 'Estudiar en Platzi', done: true },
+            { title: 'Hacer ejercicio', done: false },
+            { title: 'Tomar agua', done: true },
+            { title: 'Pasear al perro', done: false },
+        ];
+        const tasks = document.getElementById('tasks');
+        tareas.forEach(task => {
+            tasks.innerHTML +=  `<li>${task.title} <input type="checkbox" ${task.done ? 'checked': ''}/></li>`;
+        });
+    </script>
+</body>
+</html>
